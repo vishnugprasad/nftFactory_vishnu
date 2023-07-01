@@ -1,0 +1,27 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: NFTFactory
+    network: sepolia
+    source:
+      address: "0x1d7fea466EfE6736dAFBd7587c7052aA4c124eeC"
+      abi: NFTFactory
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Bought
+        - Offered
+      abis:
+        - name: NFTFactory
+          file: ./abis/NFTFactory.json
+      eventHandlers:
+        - event: Bought(uint256,indexed address,uint256,uint256,indexed address,indexed address)
+          handler: handleBought
+        - event: Offered(uint256,indexed address,uint256,uint256,indexed address)
+          handler: handleOffered
+      file: ./src/nft-factory.ts

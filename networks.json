@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "NFTFactory": {
+      "address": "0x1d7fea466EfE6736dAFBd7587c7052aA4c124eeC",
+      "startBlock": 0
+    }
+  }
+}
