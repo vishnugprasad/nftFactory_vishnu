@@ -6,7 +6,7 @@ dataSources:
     name: NFTFactory
     network: sepolia
     source:
-      address: "0x1d7fea466EfE6736dAFBd7587c7052aA4c124eeC"
+      address: "0x1fB85E7D8655BeB458B8Cbab397eA0015D401C28"
       abi: NFTFactory
       startBlock: 0
     mapping:

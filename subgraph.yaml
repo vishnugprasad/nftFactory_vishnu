@@ -6,7 +6,7 @@ dataSources:
     name: NFTFactory
     network: sepolia
     source:
-      address: "0x1d7fea466EfE6736dAFBd7587c7052aA4c124eeC"
+      address: "0x1fB85E7D8655BeB458B8Cbab397eA0015D401C28"
       abi: NFTFactory
       startBlock: 0
     mapping:
@@ -20,7 +20,8 @@ dataSources:
         - name: NFTFactory
           file: ./abis/NFTFactory.json
       eventHandlers:
-        - event: Bought(uint256,indexed address,uint256,uint256,indexed address,indexed address)
+        - event: Bought(uint256,indexed address,uint256,uint256,indexed address,indexed
+            address)
           handler: handleBought
         - event: Offered(uint256,indexed address,uint256,uint256,indexed address)
           handler: handleOffered
